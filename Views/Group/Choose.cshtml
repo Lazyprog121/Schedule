@@ -1,0 +1,15 @@
+﻿@model KPI_Schedule.Models.Group
+
+<table>
+    <tr>
+        <th>DepartmentId</th>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+    <tr>
+        <td>@Model.DepartmentId</td>
+        <td>@Model.Name</td>
+        <td>@Model.Course</td>
+    </tr>
+</table>
+<a asp-action="List">Go Back</a>

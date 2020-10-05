@@ -1,0 +1,13 @@
+﻿@model KPI_Schedule.Models.Department
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <label asp-for="FacultyId"></label>
+    <input asp-for="FacultyId" />
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <label asp-for="ShortName"></label>
+    <input asp-for="ShortName" />
+    <input type="submit" value="Save" />
+</form>
+<a asp-action="List">Go Back</a>

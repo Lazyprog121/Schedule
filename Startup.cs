@@ -35,7 +35,7 @@ namespace KPI_Schedule
             app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute("default", "{controller=home}/{action=start}");
+                endpoints.MapControllerRoute("default", "{controller=schedule}/{action=list}");
             });
         }
     }

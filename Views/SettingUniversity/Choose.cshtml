@@ -1,0 +1,19 @@
+﻿@model KPI_Schedule.Models.SettingUniversity
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>ShortName</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Site</th>
+    </tr>
+    <tr>
+        <td>@Model.Name</td>
+        <td>@Model.ShortName</td>
+        <td>@Model.Address</td>
+        <td>@Model.Phone</td>
+        <td>@Model.Site</td>
+    </tr>
+</table>
+<a asp-action="List">Go Back</a>

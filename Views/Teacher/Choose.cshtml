@@ -1,0 +1,17 @@
+﻿@model KPI_Schedule.Models.Teacher
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <tr>
+        <td>@Model.Name</td>
+        <td>@Model.Surname</td>
+        <td>@Model.Email</td>
+        <td>@Model.Phone</td>
+    </tr>
+</table>
+<a asp-action="List">Go Back</a>

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<KPI_Schedule.Models.Teacher>
+
+<a asp-action="Create" class="link-create">Create new item</a>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Surname</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>
+                <a class="td-link" asp-controller="Teacher" asp-action="Choose" asp-route-id="@item.Id">Choose</a> |
+                <a class="td-link" asp-controller="Teacher" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a class="td-link" asp-controller="Teacher" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

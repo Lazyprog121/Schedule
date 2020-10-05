@@ -1,0 +1,9 @@
+﻿@model KPI_Schedule.Models.Discipline
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <input type="submit" value="Save" />
+</form>
+<a asp-action="List">Go Back</a>

@@ -1,0 +1,12 @@
+﻿@model KPI_Schedule.Models.Group
+
+<form asp-action="Create">
+    <label asp-for="DepartmentId"></label>
+    <input asp-for="DepartmentId" />
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <label asp-for="Course"></label>
+    <input asp-for="Course" />
+    <input type="submit" value="Save" />
+</form>
+<a asp-action="List">Go Back</a>
