@@ -5,10 +5,10 @@ using KPI_Schedule.Models;
 
 namespace KPI_Schedules.Controllers
 {
-    public class SchedulesController : Controller
+    public class ScheduleController : Controller
     {
         public DbSchedule Context { get; }
-        public SchedulesController(DbSchedule context) => Context = context;
+        public ScheduleController(DbSchedule context) => Context = context;
 
         public async Task<IActionResult> List()
         {

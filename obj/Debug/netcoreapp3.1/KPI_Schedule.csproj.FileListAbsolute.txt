@@ -194,3 +194,13 @@ C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Teacher
 C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Delete.cshtml.g.cs
 C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Edit.cshtml.g.cs
 C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\List.cshtml.g.cs
+C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Department\Choose.cshtml.g.cs
+C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Department\Create.cshtml.g.cs
+C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Department\Delete.cshtml.g.cs
+C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Department\Edit.cshtml.g.cs
+C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Department\List.cshtml.g.cs
+C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Group\Choose.cshtml.g.cs
+C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Group\Create.cshtml.g.cs
+C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Group\Delete.cshtml.g.cs
+C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Group\Edit.cshtml.g.cs
+C:\Users\Dania\source\repos\Schedule\obj\Debug\netcoreapp3.1\Razor\Views\Group\List.cshtml.g.cs
