@@ -1,6 +1,8 @@
 ﻿using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using KPI_Schedule.Models;
 
 namespace KPI_Schedule.Controllers
@@ -12,11 +14,17 @@ namespace KPI_Schedule.Controllers
 
         public async Task<IActionResult> List()
         {
-            return View(await Context.Students.ToListAsync());
+            return View(await Context.Students.Include(n => n.Group).ToListAsync());
         }
 
         public IActionResult Create()
         {
+            List<Group> list = new List<Group>();
+            foreach (Group item in Context.Groups)
+                list.Add(item);
+
+            ViewBag.GroupId = new SelectList(list, "Id", "Name", list[0]);
+
             return View();
         }
 
@@ -38,7 +46,7 @@ namespace KPI_Schedule.Controllers
             if (id == null)
                 return NotFound();
 
-            var element = await Context.Students.FirstOrDefaultAsync(e => e.Id == id);
+            var element = await Context.Students.Include(n => n.Group).FirstOrDefaultAsync(e => e.Id == id);
 
             if (element == null)
                 return NotFound();
@@ -51,10 +59,16 @@ namespace KPI_Schedule.Controllers
             if (id == null)
                 return NotFound();
 
-            var element = await Context.Students.FirstOrDefaultAsync(e => e.Id == id);
+            var element = await Context.Students.Include(n => n.Group).FirstOrDefaultAsync(e => e.Id == id);
 
             if (element == null)
                 return NotFound();
+
+            List<Group> list = new List<Group>();
+            foreach (Group item in Context.Groups)
+                list.Add(item);
+
+            ViewBag.GroupId = new SelectList(list, "Id", "Name", element.GroupId);
 
             return View(element);
         }
@@ -77,7 +91,7 @@ namespace KPI_Schedule.Controllers
             if (id == null)
                 return NotFound();
 
-            var element = await Context.Students.FirstOrDefaultAsync(e => e.Id == id);
+            var element = await Context.Students.Include(n => n.Group).FirstOrDefaultAsync(e => e.Id == id);
 
             if (element == null)
                 return NotFound();

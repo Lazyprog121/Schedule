@@ -1,6 +1,8 @@
 ﻿using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using KPI_Schedule.Models;
 
 namespace KPI_Schedule.Controllers
@@ -12,11 +14,17 @@ namespace KPI_Schedule.Controllers
 
         public async Task<IActionResult> List()
         {
-            return View(await Context.Groups.ToListAsync());
+            return View(await Context.Groups.Include(n => n.Department).ToListAsync());
         }
 
         public IActionResult Create()
         {
+            List<Department> list = new List<Department>();
+            foreach (Department item in Context.Departments)
+                list.Add(item);
+
+            ViewBag.DepartmentId = new SelectList(list, "Id", "ShortName", list[0]);
+
             return View();
         }
 
@@ -38,7 +46,7 @@ namespace KPI_Schedule.Controllers
             if (id == null)
                 return NotFound();
 
-            var element = await Context.Groups.FirstOrDefaultAsync(e => e.Id == id);
+            var element = await Context.Groups.Include(n => n.Department).FirstOrDefaultAsync(e => e.Id == id);
 
             if (element == null)
                 return NotFound();
@@ -51,10 +59,16 @@ namespace KPI_Schedule.Controllers
             if (id == null)
                 return NotFound();
 
-            var element = await Context.Groups.FirstOrDefaultAsync(e => e.Id == id);
+            var element = await Context.Groups.Include(n => n.Department).FirstOrDefaultAsync(e => e.Id == id);
 
             if (element == null)
                 return NotFound();
+
+            List<Department> list = new List<Department>();
+            foreach (Department item in Context.Departments)
+                list.Add(item);
+
+            ViewBag.DepartmentId = new SelectList(list, "Id", "ShortName", element.DepartmentId);
 
             return View(element);
         }
@@ -77,7 +91,7 @@ namespace KPI_Schedule.Controllers
             if (id == null)
                 return NotFound();
 
-            var element = await Context.Groups.FirstOrDefaultAsync(e => e.Id == id);
+            var element = await Context.Groups.Include(n => n.Department).FirstOrDefaultAsync(e => e.Id == id);
 
             if (element == null)
                 return NotFound();

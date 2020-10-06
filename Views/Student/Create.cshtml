@@ -1,8 +1,8 @@
 ﻿@model KPI_Schedule.Models.Student
 
 <form asp-action="Create">
-    <label asp-for="GroupId"></label>
-    <input asp-for="GroupId" />
+    <label asp-for="Group"></label>
+    <select asp-for="GroupId" asp-items="@ViewBag.GroupId"></select>
     <label asp-for="Name"></label>
     <input asp-for="Name" />
     <label asp-for="Email"></label>

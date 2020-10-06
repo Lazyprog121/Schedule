@@ -2,8 +2,8 @@
 
 <form asp-action="Edit">
     <input type="hidden" asp-for="Id" />
-    <label asp-for="DepartmentId"></label>
-    <input asp-for="DepartmentId" />
+    <label asp-for="Department"></label>
+    <select asp-for="DepartmentId" asp-items="@ViewBag.DepartmentId"></select>
     <label asp-for="Name"></label>
     <input asp-for="Name" />
     <label asp-for="Course"></label>

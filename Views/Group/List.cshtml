@@ -3,14 +3,14 @@
 <a asp-action="Create" class="link-create">Create new item</a>
 <table>
     <tr>
-        <th>DepartmentId</th>
+        <th>Department</th>
         <th>Name</th>
         <th>Course</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.DepartmentId</td>
+            <td>@item.Department.ShortName</td>
             <td>@item.Name</td>
             <td>@item.Course</td>
             <td>

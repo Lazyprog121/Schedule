@@ -1,8 +1,8 @@
 ﻿@model KPI_Schedule.Models.Group
 
 <form asp-action="Create">
-    <label asp-for="DepartmentId"></label>
-    <input asp-for="DepartmentId" />
+    <label asp-for="Department"></label>
+    <select asp-for="DepartmentId" asp-items="@ViewBag.DepartmentId"></select>
     <label asp-for="Name"></label>
     <input asp-for="Name" />
     <label asp-for="Course"></label>

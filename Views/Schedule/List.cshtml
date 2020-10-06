@@ -4,9 +4,10 @@
 <table>
     <tr>
         <th>Name</th>
-        <th>TeacherId</th>
-        <th>DisciplineId</th>
-        <th>GroupId</th>
+        <th>Teacher Name</th>
+        <th>Teacher Surname</th>
+        <th>Discipline</th>
+        <th>Group</th>
         <th>Time</th>
         <th>Classroom</th>
     </tr>
@@ -14,9 +15,10 @@
     {
         <tr>
             <td>@item.Name</td>
-            <td>@item.TeacherId</td>
-            <td>@item.DisciplineId</td>
-            <td>@item.GroupId</td>
+            <td>@item.Teacher.Name</td>
+            <td>@item.Teacher.Surname</td>
+            <td>@item.Discipline.Name</td>
+            <td>@item.Group.Name</td>
             <td>@item.Time</td>
             <td>@item.Classroom</td>
             <td>

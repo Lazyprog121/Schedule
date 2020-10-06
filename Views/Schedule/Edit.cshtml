@@ -4,12 +4,12 @@
     <input type="hidden" asp-for="Id" />
     <label asp-for="Name"></label>
     <input asp-for="Name" />
-    <label asp-for="TeacherId"></label>
-    <input asp-for="TeacherId" />
-    <label asp-for="DisciplineId"></label>
-    <input asp-for="DisciplineId" />
-    <label asp-for="GroupId"></label>
-    <input asp-for="GroupId" />
+    <label asp-for="Teacher"></label>
+    <select asp-for="TeacherId" asp-items="@ViewBag.TeacherIdSurname"></select>
+    <label asp-for="Discipline"></label>
+    <select asp-for="DisciplineId" asp-items="@ViewBag.DisciplineId"></select>
+    <label asp-for="Group"></label>
+    <select asp-for="GroupId" asp-items="@ViewBag.GroupId"></select>
     <label asp-for="Time"></label>
     <input asp-for="Time" />
     <label asp-for="Classroom"></label>
